@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KENT  JUATON/ WEB DEVELOPER </title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="coffeshop.css">
+
+  <style>
+    
+    .about-me {
+      background-color: #f0f8ff; 
+      padding: 60px 0; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: fadeInUp 1s ease-out; 
+    }
+    .about-me h2 {
+      font-size: 2.5rem;
+      font-weight: 700; 
+      color: #333; 
+      margin-bottom: 20px; /* Spacing below heading */
+      animation: slideInLeft 1s ease-out 0.2s both; /* Slide in from left */
+    }
+    .about-me p {
+      font-size: 1.2rem; /* Readable paragraph size */
+      line-height: 1.6; /* Better line spacing */
+      color: #555; /* Subtle color */
+      margin-bottom: 20px; /* Spacing below paragraphs */
+      font-weight: 500; /* Medium bold */
+      animation: slideInLeft 1s ease-out 0.4s both; /* Slide in from left with delay */
+    }
+    .about-me img {
+      width: 300px; /* Larger size */
+      height: 300px; /* Square for perfect circle */
+      object-fit: cover; /* Ensure image fits without distortion */
+      border-radius: 50%; /* Perfect circle */
+      border: 5px solid black; /* Black frame */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      animation: zoomIn 1s ease-out 0.6s both; /* Zoom in animation with delay */
+      transition: transform 0.3s ease; /* Smooth transition on hover */
+    }
+    .about-me img:hover {
+      transform: scale(1.05); /* Slight zoom on hover */
+    }
+    .focus-card {
+      background-color: #fff; /* White background for cards */
+      border: 1px solid #ddd; /* Light border */
+      border-radius: 10px; /* Rounded corners */
+      padding: 10px; /* Padding inside cards */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+      animation: fadeInUp 1s ease-out 0.8s both; /* Fade in animation with delay */
+      height: 100%; /* Ensure equal height */
+    }
+    .focus-card:hover {
+      transform: translateY(-5px); /* Lift on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+    .focus-card h3 {
+      font-size: 1.5rem; /* Heading size */
+      font-weight: 600; /* Semi-bold */
+      color: #333; /* Dark color */
+      margin-bottom: 10px; /* Spacing */
+    }
+    .focus-card p {
+      font-size: 1rem; /* Paragraph size */
+      color: #666; /* Subtle color */
+      line-height: 1.5; /* Line spacing */
+    }
+    /* Keyframe animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .about-me h2 {
+        font-size: 2rem;
+      }
+      .about-me p {
+        font-size: 1rem;
+      }
+      .about-me {
+        padding: 40px 0;
+      }
+      .about-me img {
+        width: 200px;
+        height: 200px;
+      }
+      .focus-card {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      /* Hero adjustments */
+      .hero-section {
+        padding-top: 110px;
+        padding-bottom: 40px;
+      }
+      .hero-title {
+        font-size: 2.2rem !important;
+      }
+      .hero-subtitle {
+        font-size: 1.05rem !important;
+      }
+      .hero-gif {
+        margin: 0 auto;
+        max-width: 240px;
+      }
+
+      /* Navbar mobile layout */
+      .portfolio-navbar {
+        padding: 0.6rem 0.8rem;
+      }
+      .navbar-left {
+        font-size: 1.2rem;
+      }
+      .navbar-right {
+        gap: 6px;
+      }
+      .navbar-right a {
+        font-size: 1.0rem;
+      }
+      .profile-avatar {
+        width: 34px;
+        height: 34px;
+        margin-left: 0;
+      }
+
+      /* Footer mobile */
+      .footer a {
+        margin-right: 10px;
+        font-size: 1.25rem;
+      }
+      .footer .d-flex {
+        flex-wrap: wrap;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav class="portfolio-navbar">
+   
+    <div class="navbar-left">
+      KENT
+    </div>
+    <div class="navbar-center">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Portfolio
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="portfolio.html">Educational Background</a></li>
+            <li><a class="dropdown-item" href="#tech-stack">Programming Skills</a></li>
+            <li><a class="dropdown-item" href="#tools-software">Tools and Software</a></li>
+            <li><a class="dropdown-item" href="#projects">Project</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Me</a>
+        </li>
+      </ul>
+    </div>
+    
+  </nav>
+  </nav>
+
+  
+  <section class="hero-section">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 text-center ">
+        <h1 class="hero-title">Hi, I'm <span> Kent Juaton</span></h1>
+        <p class="hero-subtitle">
+          A aspiring Front-end Developer and Cybersecurity analyst.
+        </p>
+
+        <div class="mt-4">
+          <a href="#portfolio" class="btn btn-dark me-2">View Portfolio</a>
+        </div>
+      </div>
+
+    
+      <div class="col-md-6 text-center mt-4 ">
+        <img
+          src="picture/picture.jpg"
+          alt="Kent waving"
+          class="hero-gif"
+        >
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="about-me reveal">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-md-6 text-center mt-4 mt-md-0 reveal-left">
+        <img src="picture/about.jpg" alt="About Me Image" class="img-fluid rounded about-img">
+      </div>
+      <div class="col-md-6 reveal-right">
+        <h2 class="about-title">About Me</h2>
+        <p class="about-text">
+          An aspiring front-end developer and cybersecurity analyst student from Maritime,
+          passionate about intuitive interfaces and digital protection.
+        </p>
+
+        <div class="row mt-4">
+          <div class="col-12 col-md-4 mb-3 reveal-card">
+            <div class="focus-card">
+              <h3>Responsive</h3>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 mb-3 reveal-card">
+            <div class="focus-card">
+              <h3>Secured</h3>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 mb-3 reveal-card">
+            <div class="focus-card">
+              <h3>Creative</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </section>
+  <footer class="footer py-5">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h2 class="footer-name">KENT JUATON</h2>
+      <p class="footer-role">Web Developer</p>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="d-flex justify-content-center gap-3">
+
+      <a href="#" class="bi bi-facebook"></a>
+      <a href="#" class="bi bi-twitter"></a>
+      <a href="#" class="bi bi-linkedin"></a>
+          </a>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <h3 class="footer-title mb-3">Send Message</h3>
+
+        <input type="text" class="form-control mb-2" placeholder="Your Name">
+        <input type="email" class="form-control mb-2" placeholder="Your Email">
+        <textarea class="form-control mb-3" rows="3" placeholder="Your Message"></textarea>
+
+        <button class="btn btn-primary w-100">Send</button>
+      </div>
+</footer>
+<script>
+  const reveals = document.querySelectorAll(
+    '.reveal, .reveal-left, .reveal-right, .reveal-card'
+  );
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  reveals.forEach(el => observer.observe(el));
+
+  const footerItems = document.querySelectorAll('.footer .col-md-4');
+
+  const footerObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  footerItems.forEach(item => footerObserver.observe(item));
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

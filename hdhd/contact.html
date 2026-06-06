@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Kent Juaton</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .navbar {
+            background-color: #629FAD;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #adb5bd !important;
+        }
+        .contact-section {
+            background-color: #ffffff;
+            padding: 60px 0;
+        }
+        .form-control {
+            border-radius: 0;
+        }
+        .btn-submit {
+            background-color: #27108d;
+            border-color: #6c757d;
+            color: #ffffff;
+        }
+        .btn-submit:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #adb5bd;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive tweaks */
+        .contact-section iframe {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            max-width: 450px;
+            border: 0;
+        }
+
+        .contact-section h2 {
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+        }
+
+        .contact-section h4 {
+            font-size: 1.15rem;
+        }
+
+        @media (max-width: 575.98px) {
+            .contact-section {
+                padding: 32px 0;
+            }
+            .social-icons a {
+                margin: 0 8px;
+                font-size: 1.35rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Kent Juaton</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <div class="row">
+                <!-- Location Embed (Left Side) -->
+                <div class="col-lg-6 mb-4">
+                    <h4>My Location</h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10682.85507133852!2d121.36506503191322!3d12.995311229387356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bca41070eb2c09%3A0x37b0c9c99230622d!2sMarayos%2C%20Pinamalayan%2C%20Oriental%20Mindoro!5e0!3m2!1sen!2sph!4v1768948474270!5m2!1sen!2sph"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                <!-- Send Message Form (Right Side) -->
+                <div class="col-lg-6">
+                    <h4>Send Me a Message</h4>
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-start">
+                    <p class="mb-0">KENT JUATON<br><small>WEB DEVELOPER</small></p>
+                </div>
+                <div class="col-md-4 text-center social-icons">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                </div>
+                <div class="col-md-4 text-md-end text-start">
+                    <small>&copy; <span id="year"></span> Kent Juaton</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (for navbar toggle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+

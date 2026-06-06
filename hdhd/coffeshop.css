@@ -1,0 +1,423 @@
+body {
+  background-color: #FEEAC9;
+  padding-top: 40px; /* Added padding to create space at the top, accounting for fixed navbar height */
+  animation: fadeIn 1s ease-in-out; /* Added fade-in animation for smooth entry */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-section {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 70px 10px;
+
+}
+
+.hero-title {
+  font-size: 4rem; /* increased from 3rem */
+  font-weight: 700;
+  color: #3b2f1f; /* dark accent */
+  animation: slideInLeft 1.2s ease-out 0.3s both; /* Slide in from left with delay */
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem; /* increased from 1.2rem */
+  color: #5c4a32;
+  max-width: 600px;
+  margin-top: 20px;
+  animation: slideInRight 1.2s ease-out 0.6s both; /* Slide in from right with delay */
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-gif {
+  max-width: 300px; 
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  margin-right: 5%;
+  margin-left: 150px;
+  animation: zoomIn 1.5s ease-out 0.9s both; /* Zoom in with delay */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Buttons */
+.btn-dark {
+  background-color: #3b2f1f;
+  border-color: #3b2f1f;
+  font-size: 1.2rem; /* bigger button text */
+  padding: 12px 28px; /* bigger buttons */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.btn-dark:hover {
+  background-color: #2a1f13;
+  border-color: #2a1f13;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn-outline-dark {
+  color: #3b2f1f;
+  border-color: #3b2f1f;
+  font-size: 1.2rem; /* bigger button text */
+  padding: 12px 28px;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.btn-outline-dark:hover {
+  background-color: #3b2f1f;
+  color: #fff;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Navbar styling */
+.portfolio-navbar {
+  background-color: #3b2f1f;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: fixed; /* Fixed position to stick to the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  animation: slideDown 0.8s ease-out; /* Slide down animation for navbar */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar-left {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar-left:hover {
+  color: #FEEAC9; /* Light accent on hover */
+}
+
+.navbar-center .nav-link, .navbar-center .dropdown-toggle {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.navbar-center .nav-link:hover, .navbar-center .dropdown-toggle:hover {
+  color: #FEEAC9; /* Light accent on hover */
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+.navbar-center .dropdown-menu {
+  background-color: #3b2f1f;
+  min-width: 250px;
+  
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-center .dropdown-item {
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.navbar-center .dropdown-item:hover {
+  background-color: #5c4a32;
+  transform: translateX(5px); /* Slight slide on hover */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-right a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.navbar-right a:hover {
+  color: #FEEAC9; /* Light accent on hover */
+  transform: scale(1.1); /* Slight scale on hover */
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.profile-avatar:hover {
+  transform: scale(1.1); /* Slight scale on hover */
+}
+
+@media (max-width: 768px) {
+  .portfolio-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navbar-center {
+    width: 100%;
+  }
+}
+.focus-section {
+  background-color: #FEEAC9; 
+  padding: 60px 0;
+}
+
+
+
+/* ABOUT SECTION */
+.about-me {
+  padding: 80px 0;
+}
+
+.about-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-text {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* IMAGE */
+.about-img {
+  max-width: 90%;
+  transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.03);
+}
+
+/* FOCUS CARDS */
+.focus-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 50px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  height: 100%;
+}
+
+.focus-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.focus-card p {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.focus-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* SCROLL ANIMATION */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Stagger cards */
+.reveal-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-card:nth-child(1) { transition-delay: 0.1s; }
+.reveal-card:nth-child(2) { transition-delay: 0.2s; }
+.reveal-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-me {
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .focus-card p {
+    white-space: normal;
+  }
+}
+
+
+/* FOOTER BASE */
+.footer {
+  background: #0e0e0e;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* LEFT */
+.footer-name {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  transition: transform 0.4s ease;
+}
+
+.footer-role {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+/* SOCIAL ICONS */
+.footer a {
+  font-size: 1.6rem; /* medium size */
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-right: 20px;
+}
+
+.footer a:hover {
+  transform: translateY(-4px) scale(1.1);
+  color: #0d6efd;
+}
+
+/* FORM */
+.footer input,
+.footer textarea {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer input::placeholder,
+.footer textarea::placeholder {
+  color: #888;
+}
+
+.footer input:focus,
+.footer textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.15rem rgba(13,110,253,0.25);
+  background: transparent;
+}
+
+/* BUTTON */
+.footer button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(13,110,253,0.4);
+}
+
+/* SCROLL ANIMATION */
+.footer .col-md-4 {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.footer .col-md-4.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer .col-md-4:nth-child(1) { transition-delay: 0.1s; }
+.footer .col-md-4:nth-child(2) { transition-delay: 0.25s; }
+.footer .col-md-4:nth-child(3) { transition-delay: 0.4s; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-name {
+    font-size: 1.5rem;
+  }
+}
+
